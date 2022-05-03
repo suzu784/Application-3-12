@@ -2,11 +2,15 @@
 
 <% @books.each do |book| %>
 
-<p>title:</p>
-<span><%= book.title %></span>
+<table>title:</table>
+<tr><%= book.title %></tr>
+ 
+<table>body</table>
+<tr><%= book.body %></tr>
 
-<p>body</p>
-<span><%= book.body %></span>
+<%= link_to "show", book_path(book.id) %>
+<%= link_to "edit", edit_book_path(book.id) %>
+
 
 <% end %>
 
